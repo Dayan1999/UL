@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HOME</title>
+  <link rel="stylesheet" type="text/css" href="Homepagestyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!--Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+
+  <style>
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: auto;
+      margin-top: -265px;
+      font-size: 15px;
+      color: aliceblue;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transform: translate(-50%, -50%);
+      background-color: rgb(57, 54, 54);
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: none;
+      border-radius: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slideshow">
+    <div class="images">
+      <div class="details">
+        <ul class="menu">
+          <li class="menu"><a href="#">HOME</a></li>
+          <li class="menu"><a href="#">Flights</a></li>
+          <li class="menu"><a href="#">OFFERS</a></li>
+          <li class="menu"><a href="#">PAYMENT</a></li>
+          <li class="menu"><a href="#">ABOUTUS</a></li>
+          <li class="menu"><a href="#">CONTACTUS</a></li>
+          <li class="menu"><a href="#">FAQ</a></li>
+        </ul>
+
+        <h1>
+          TRAVEL AROUND WITHIN ONE CLICK
+        </h1>
+        <h2>
+          TRAVELER
+        </h2>
+        <h3>
+          <span class="high">SCHEDULE</span>YOUR<span class="high">BOOKINGS</span>
+        </h3>
+
+        <!-- *****************************************************************************************************************-->
+
+
+        <button onclick="showPopup()" class="btn btn-primary">Button 1</button>
+
+        <div id="popup" class="popup">
+          <h5 class="">Candidate sourcing, assessment and recruitment services are provided by a third party service
+            provider on behalf of srilankan.</h5>
+          <p>Your access and use of the careers microsite (including any
+
+            application that you submit) will be subject to the provider’s
+
+            terms of use and privacy policy as displayed on the site.</p>
+          <button onclick="hidePopup()" class="btn btn-outline-danger">Stay Here</button> &nbsp;&nbsp;&nbsp;
+          <button onclick="redirect()" class="btn btn-outline-success">Continue</button>
+        </div>
+
+        <script>
+          function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+          }
+
+          function hidePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+          }
+
+          function redirect() {
+            var newTab = window.open();
+            newTab.location.href = 'https://www.srilankan.com';
+          }
+        </script>
+
+        <!-- *****************************************************************************************************************-->
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
